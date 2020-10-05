@@ -1,8 +1,8 @@
 package AmmoSearch;
 
-//revised
 import Properties.Logins;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.testng.annotations.*;
@@ -11,11 +11,14 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class Ammo {
+    static String filename="Fotos";
 
     @BeforeMethod
     void login()throws IOException{
         String baseUrl = Logins.Url();
         open(baseUrl);
+        Configuration.reportsFolder = "C:/Windows/System32/config/systemprofile/" +
+                "AppData/Local/Jenkins.jenkins/workspace/Ammo/build/reports/tests/" + filename;
     }
     @Test
     void CaliberSelection45ACP() {
@@ -26,7 +29,8 @@ public class Ammo {
         String currentURL = url();
         System.out.println(currentURL);
         assert currentURL.contains("ACP");
-        screenshot("45 ACP");
+        filename= "45 ACP";
+        screenshot(filename);
     }
         @Test
         void CaliberSelection12Gage(){
@@ -37,6 +41,7 @@ public class Ammo {
             String currentURL = url();
             System.out.println(currentURL);
             assert currentURL.contains("12+Gauge");
-            screenshot("12 Gauge");
+            filename= "12 Gauge";
+            screenshot(filename);
     }
 }
