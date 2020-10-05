@@ -21,7 +21,7 @@ public class Firearms {
         Configuration.reportsFolder = SetPath.FotoPath();
     }
     @Test
-    void CaliberSelection45ACP() {
+    void GunSelection9MM() {
         SelenideElement firearms = $(By.xpath("//button[contains(text(),'Firearms')]")).waitUntil(Condition.visible, 1000);
         firearms.hover();
         SelenideElement nine = $(By.linkText("9MM")).waitUntil(Condition.visible, 2000);
