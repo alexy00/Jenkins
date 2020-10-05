@@ -13,14 +13,13 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class Firearms {
-    static String filename;
 
     @BeforeMethod
     void login()throws IOException {
         String baseUrl = Logins.Url();
         open(baseUrl);
         Configuration.reportsFolder = "C:/Windows/System32/config/systemprofile/" +
-                "AppData/Local/Jenkins.jenkins/workspace/Firearms/build/reports/tests/" + filename;
+                "AppData/Local/Jenkins.jenkins/workspace/Firearms/build/reports/tests/Fotos";
     }
     @Test
     void CaliberSelection45ACP() {
@@ -31,7 +30,6 @@ public class Firearms {
         String currentURL = url();
         System.out.println(currentURL);
         assert currentURL.contains("9mm");
-        filename = "9MM";
-        screenshot(filename);
+        screenshot("9MM");
     }
 }
