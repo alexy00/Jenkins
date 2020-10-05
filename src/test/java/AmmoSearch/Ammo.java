@@ -11,14 +11,12 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class Ammo {
-    static String filename="Fotos";
-
     @BeforeMethod
     void login()throws IOException{
         String baseUrl = Logins.Url();
         open(baseUrl);
         Configuration.reportsFolder = "C:/Windows/System32/config/systemprofile/" +
-                "AppData/Local/Jenkins.jenkins/workspace/Ammo/build/reports/tests/" + filename;
+                "AppData/Local/Jenkins.jenkins/workspace/Ammo/build/reports/tests/Fotos";
     }
     @Test
     void CaliberSelection45ACP() {
@@ -29,7 +27,6 @@ public class Ammo {
         String currentURL = url();
         System.out.println(currentURL);
         assert currentURL.contains("ACP");
-        //filename= "45 ACP";
         screenshot("45 ACP");
     }
         @Test
@@ -41,7 +38,6 @@ public class Ammo {
             String currentURL = url();
             System.out.println(currentURL);
             assert currentURL.contains("12+Gauge");
-            //filename= "12 Gauge";
             screenshot("12 Gauge");
     }
 }
