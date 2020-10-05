@@ -9,14 +9,14 @@ import org.testng.annotations.*;
 import java.io.IOException;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
+import Properties.FotoPath;
 
 public class Ammo {
     @BeforeMethod
     void login()throws IOException{
         String baseUrl = Logins.Url();
         open(baseUrl);
-        Configuration.reportsFolder = "C:/Windows/System32/config/systemprofile/" +
-                "AppData/Local/Jenkins.jenkins/workspace/Ammo/build/reports/tests/Fotos";
+        Configuration.reportsFolder = FotoPath.Path();
     }
     @Test
     void CaliberSelection45ACP() {
