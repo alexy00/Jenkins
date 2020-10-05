@@ -1,6 +1,6 @@
 package AmmoSearch;
 
-import Properties.Logins;
+import Properties.SetURL;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
@@ -14,7 +14,7 @@ import Properties.SetPath;
 public class Ammo {
     @BeforeMethod
     void login()throws IOException{
-        String baseUrl = Logins.Url();
+        String baseUrl = SetURL.Url();
         open(baseUrl);
         Configuration.reportsFolder = SetPath.FotoPath();
     }

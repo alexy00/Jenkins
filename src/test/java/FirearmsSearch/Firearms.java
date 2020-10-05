@@ -2,22 +2,21 @@ package FirearmsSearch;
 
 
 import Properties.SetPath;
-import Properties.Logins;
+import Properties.SetURL;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.io.IOException;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class Firearms {
 
     @BeforeMethod
-    void login()throws IOException {
-        String baseUrl = Logins.Url();
+    void login(){
+        String baseUrl = SetURL.Url();
         open(baseUrl);
         Configuration.reportsFolder = SetPath.FotoPath();
     }
