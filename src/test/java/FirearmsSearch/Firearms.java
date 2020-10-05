@@ -1,7 +1,7 @@
 package FirearmsSearch;
 
 
-import Properties.FotoPath;
+import Properties.SetPath;
 import Properties.Logins;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -19,7 +19,7 @@ public class Firearms {
     void login()throws IOException {
         String baseUrl = Logins.Url();
         open(baseUrl);
-        Configuration.reportsFolder = FotoPath.Path();
+        Configuration.reportsFolder = SetPath.FotoPath();
     }
     @Test
     void CaliberSelection45ACP() {
