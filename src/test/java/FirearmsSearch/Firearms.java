@@ -1,6 +1,7 @@
 package FirearmsSearch;
 
 
+import Properties.FotoPath;
 import Properties.Logins;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -18,8 +19,7 @@ public class Firearms {
     void login()throws IOException {
         String baseUrl = Logins.Url();
         open(baseUrl);
-        Configuration.reportsFolder = "C:/Windows/System32/config/systemprofile/" +
-                "AppData/Local/Jenkins.jenkins/workspace/Firearms/build/reports/tests/Fotos";
+        Configuration.reportsFolder = FotoPath.Path();
     }
     @Test
     void CaliberSelection45ACP() {
