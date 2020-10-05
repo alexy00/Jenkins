@@ -29,8 +29,8 @@ public class Ammo {
         String currentURL = url();
         System.out.println(currentURL);
         assert currentURL.contains("ACP");
-        filename= "45 ACP";
-        screenshot(filename);
+        //filename= "45 ACP";
+        screenshot("45 ACP");
     }
         @Test
         void CaliberSelection12Gage(){
@@ -41,7 +41,7 @@ public class Ammo {
             String currentURL = url();
             System.out.println(currentURL);
             assert currentURL.contains("12+Gauge");
-            filename= "12 Gauge";
-            screenshot(filename);
+            //filename= "12 Gauge";
+            screenshot("12 Gauge");
     }
 }
