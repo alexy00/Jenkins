@@ -18,7 +18,7 @@ public class Firearms {
     void login(){
         String baseUrl = SetURL.Url();
         open(baseUrl);
-        Configuration.reportsFolder = SetPath.FotoPath();
+        Configuration.reportsFolder = SetPath.Firearms();
     }
     @Test
     void GunSelection9MM() {

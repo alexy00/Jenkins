@@ -16,7 +16,7 @@ public class Ammo {
     void login()throws IOException{
         String baseUrl = SetURL.Url();
         open(baseUrl);
-        Configuration.reportsFolder = SetPath.FotoPath();
+        Configuration.reportsFolder = SetPath.Ammo();
     }
     @Test
     void CaliberSelection45ACP() {
