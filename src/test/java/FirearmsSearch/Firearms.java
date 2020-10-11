@@ -1,6 +1,6 @@
 package FirearmsSearch;
 
-
+//This is a bullshit
 import Properties.SetPath;
 import Properties.SetURL;
 import com.codeborne.selenide.Condition;
