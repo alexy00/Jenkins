@@ -24,6 +24,7 @@ public class Ammo {
         ammo.hover();
         SelenideElement acp = $(By.linkText("45 ACP")).waitUntil(Condition.visible, 2000);
         acp.click();
+        sleep(300);
         String currentURL = url();
         System.out.println(currentURL);
         assert currentURL.contains("ACP");
@@ -35,6 +36,7 @@ public class Ammo {
             ammo.hover();
             SelenideElement twelve = $(By.linkText("12 Gauge")).waitUntil(Condition.visible,2000);
             twelve.click();
+            sleep(300);
             String currentURL = url();
             System.out.println(currentURL);
             assert currentURL.contains("12+Gauge");
