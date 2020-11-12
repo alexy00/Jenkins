@@ -18,7 +18,7 @@ public class Ammo {
         open(baseUrl);
         Configuration.reportsFolder = SetPath.Ammo();
     }
-    @Test(priority = 2)
+    @Test(priority = 1)
     void CaliberSelection45ACP() {
         SelenideElement ammo = $(By.xpath("//button[contains(text(),'Ammo')]")).waitUntil(Condition.visible, 1000);
         ammo.hover();
@@ -30,7 +30,7 @@ public class Ammo {
         assert currentURL.contains("ACP");
         screenshot("45 ACP");
     }
-        @Test(priority = 1)
+        @Test(priority = 0)
         void CaliberSelection12Gage(){
             SelenideElement ammo = $(By.xpath("//button[contains(text(),'Ammo')]")).waitUntil(Condition.visible,1000);
             ammo.hover();
@@ -39,7 +39,7 @@ public class Ammo {
             sleep(300);
             String currentURL = url();
             System.out.println(currentURL);
-            assert currentURL.contains("12+Gauge");
+            assert currentURL.contains("10000533");
             screenshot("12 Gauge");
     }
 }
