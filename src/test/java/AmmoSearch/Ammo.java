@@ -29,17 +29,6 @@ public class Ammo {
         System.out.println(currentURL);
         assert currentURL.contains("ACP");
         screenshot("45 ACP");
-    }
-        @Test(priority = 0)
-        void CaliberSelection12Gage(){
-            SelenideElement ammo = $(By.xpath("//button[contains(text(),'Ammo')]")).waitUntil(Condition.visible,1000);
-            ammo.hover();
-            SelenideElement twelve = $(By.linkText("12 Gauge")).waitUntil(Condition.visible,2000);
-            twelve.click();
-            sleep(300);
-            String currentURL = url();
-            System.out.println(currentURL);
-            assert currentURL.contains("10000533");
-            screenshot("12 Gauge");
+
     }
 }
