@@ -18,7 +18,7 @@ public class Ammo {
         open(baseUrl);
         Configuration.reportsFolder = SetPath.Ammo();
     }
-    @Test
+    @Test(priority = 0)
     void CaliberSelection45ACP() {
         SelenideElement ammo = $(By.xpath("//button[contains(text(),'Ammo')]")).waitUntil(Condition.visible, 1000);
         ammo.hover();
