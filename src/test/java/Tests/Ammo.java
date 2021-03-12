@@ -1,6 +1,5 @@
-package AmmoSearch;
+package Tests;
 
-import Properties.SetURL;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
@@ -9,7 +8,6 @@ import org.testng.annotations.*;
 import java.io.IOException;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import Properties.SetPath;
 
 public class Ammo {
     @BeforeMethod

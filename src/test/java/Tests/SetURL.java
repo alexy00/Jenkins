@@ -1,4 +1,4 @@
-package Properties;
+package Tests;
 
 public  class SetURL {
     public static String Url(){

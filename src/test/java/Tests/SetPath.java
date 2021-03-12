@@ -1,4 +1,4 @@
-package Properties;
+package Tests;
 
 public class SetPath {
     public static String Ammo(){

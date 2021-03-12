@@ -1,8 +1,6 @@
-package FirearmsSearch;
+package Tests;
 
 
-import Properties.SetPath;
-import Properties.SetURL;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;

@@ -3,7 +3,7 @@
 <suite thread-count="1" parallel="methods" verbose="1" allow-return-values="true" name="Jenkins">
     <test name="FirearmsSearch">
         <classes>
-            <class name= "FirearmsSearch.Firearms"/>
+            <class name= "Tests.Firearms"/>
         </classes>
     </test>
 </suite>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" parallel="methods" verbose="1" allow-return-values="true" name="Jenkins">
-    <test name="AmmoSearch">
+    <test name="Tests">
         <classes>
-            <class name= "AmmoSearch.Ammo"/>
-            <class name= "FirearmsSearch.Firearms"/>
+            <class name= "Tests.Ammo"/>
+            <class name= "Tests.Firearms"/>
         </classes>
     </test>
 </suite>
